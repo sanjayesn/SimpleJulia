@@ -8,15 +8,15 @@ Fs = 44100; # Sampling frequency
 
 # Ambient measurements
 A = zeros(sec*Fs, ntracks); # K=3 noise samples of five sec each
-A[:,1], Fs = wavread("tsunami_cut.wav");
-A[:,2], Fs = wavread("static_cut.wav");
-A[:,3], Fs = wavread("symphony_cut.wav");
+A[:,1], Fs = wavread("resources/tsunami_cut.wav");
+A[:,2], Fs = wavread("resources/static_cut.wav");
+A[:,3], Fs = wavread("resources/symphony_cut.wav");
 
 # Noisy signal we want to estimate
-n, Fs = wavread("n_train.wav");
+n, Fs = wavread("resources/n_train.wav");
 
 # Sound to denoise:
-noisy, Fs = wavread("noisy_target.wav");
+noisy, Fs = wavread("resources/noisy_target.wav");
 
 plot((1:length(noisy))/Fs, noisy,  title="Noisy Signal", xlabel="Time (seconds)", label="")
 
