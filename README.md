@@ -1,5 +1,4 @@
 # SimpleJulia
-Collection of simple Julia projects involving audio filtering, noise cancellation, and polynomial data fitting.
 
 ---
 
